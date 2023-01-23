@@ -1,0 +1,128 @@
+//#include <iostream>
+//#include <string>
+//using namespace std;
+//int main()
+//{
+//    int myarray[5 = { 21,43,23,54,75,13,5,8,25,10 };
+//    int key, loc;
+//    cout << "The input array is" << endl;
+//    for (int i = 0; i <5; i++) {
+//        cout << myarray[i] << " ";
+//    }
+//    cout << endl;
+//    cout << "Enter the key to be searched : "; cin >> key;
+//    for (int i = 0; i < 5 i++)
+//    {
+//        if (myarray[i] == key)
+//        {
+//            loc = i + 1;
+//            break;
+//        }
+//        else
+//            loc = 0;
+//    }
+//    if (loc != 0)
+//    {
+//        cout << "Key found at position " << loc << " in the array";
+//    }
+//    else
+//    {
+//        cout << "Could not find given key in the array";
+//    }
+//
+//}
+
+/* File Handling with C++ using ifstream & ofstream class object*/
+/* To write the Content in File*/
+/* Then to read the content of file*/
+/* File Handling with C++ using ifstream & ofstream class object*/
+/* To write the Content in File*/
+/* Then to read the content of file*/
+//#include <iostream>
+//#include <fstream>
+//#include <string>
+//
+//using namespace std;
+//
+//// Driver Code
+//int main()
+//{
+//	string mystring;
+//	int i = 0;
+//	ofstream myfile;
+//	myfile.open("c.txt", ios::app);
+//	do {
+//		i++;
+//			cout << "what do you want ?"; 
+//	
+//		getline(cin, mystring);
+//		myfile << mystring << endl;
+//	} while (i != 5);
+//
+//	myfile.close();
+//	return 0;
+//
+//	
+//}
+
+#include<windows.h>
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int DisplayResourceNAMessageBox()
+{
+    int msgboxID = MessageBox(
+        NULL,
+        (LPCWSTR)L"Resource not available\nDo you want to try again?",
+        (LPCWSTR)L"Account Details",
+        MB_ICONWARNING | MB_CANCELTRYCONTINUE | MB_DEFBUTTON2
+    );
+
+    switch (msgboxID)
+    {
+    case IDCANCEL:
+        // TODO: add code
+        break;
+    case IDTRYAGAIN:
+        // TODO: add code
+        break;
+    case IDCONTINUE:
+        // TODO: add code
+        break;
+    }
+
+    return msgboxID;
+}
+
+int main()
+
+{
+
+    //DisplayResourceNAMessageBox();
+
+    string mystring;
+    	int i = 0;
+    	ofstream myfile;
+    	myfile.open("c.txt", ios::app);
+    	do {
+    		i++;
+    			cout << "what do you want ?"; 
+    	
+    		getline(cin, mystring);
+    		myfile << mystring << endl;
+    	} while (i != 1);
+        ifstream m;
+        m.open("c.txt");
+        char o[100];
+
+        if (m.is_open()) {
+            while (!m.eof()) {
+                m >> o;
+                cout << o << endl;
+            }
+        }
+    	myfile.close();
+	return 0;
+}
