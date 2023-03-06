@@ -1,1 +1,122 @@
 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+double sum()
+{
+	double num1, num2;
+	cout << "ievadi 2 skaitlus" << endl;
+	cin >> num1 >> num2;
+	return num1 + num2;
+}
+//uzraksti 2 skaitlus un lai tiem parada summu
+double quadr()
+{
+	double num1;
+	cout << "ievadi 1 skaitli" << endl;
+	cin >> num1;
+	return num1 * num1;
+
+}
+//skaitla 2 pakape(kvadrats)
+void avo()
+{
+	vector<double> n{ 1,2,3,4,5 };
+	cout << (n[0] + n[1] + n[2] + n[3] + n[4]) / 5;
+}
+//avarage skaitlim videjais aretmetiskais 
+void optil()
+{
+	vector<int> n{ 1,2,3,4,5,6,7,8,9 };
+	int i = 0;
+	do {
+		if (n[i] % 2 == 0)cout << n[i] << " ";
+		i++;
+	} while (i < n.size());
+}
+//izvadi tikai para skaitlus
+void kargo()
+{
+	vector <int> kk{ 2, 3, 7, 11, 13, 17, 19 };
+	int num1;
+	cout << " ievadi 1 skaitli zem 20 kas ir pozitivs" << endl;
+	cin >> num1;
+	int i = 0; bool a = false;
+	do {
+		if (num1 == kk[i]) { cout << "true"; a = true; }
+		i++;
+}while (i < kk.size());
+if (a == false)cout << "false";
+}
+// ja ievada prime number( uz sevi un uz 1 kuri dalas)   izvadi   true ja citi izvadi false 
+void lolo()
+{
+	vector <int> mm{ 1,2,3,4,5,6 };
+	int i = 0, sum = 0;
+	do {
+		cout << mm[i] * mm[i] << " ";
+		sum = sum + mm[i] * mm[i];
+		i++;
+	} while (i < mm.size());
+	cout << sum;
+}
+//izvadi katra skaitla kvadrata summu
+void koko()
+{ 
+	vector <int> ll{ 1,-2,3, -4,5 };
+	int i = 0;
+		do {
+			if ( ll[i] > 0) cout << ll[i] << " ";
+			i++;
+		} while (i < ll.size());
+		
+
+}
+//izvadi visus pozitivus skaitlus
+void bobo()
+{
+	vector <int> bb{ 1,-2,3, -4,5 };
+	int i = 0;
+	do {
+		if (bb[i] < 0) cout << bb[i] << " ";
+		i++;
+	} while (i < bb.size());
+}
+//izvadi visus negativus skaitlus
+void sisi()
+{
+	string var = "Helloooo";
+	int i = var.size();
+	do {
+		cout << var[i];
+		i--;
+	} while (i != -1);
+}
+//ooooolleh izvadiii
+void mumu()
+{
+	string pol = "racecar";
+	if (pol[0] == pol[6] && pol[1] == pol[5] && pol[2] == pol[4]);
+	
+	
+}
+//polindromm nepabeigtais
+void popo()
+{
+	string var = "ammendment";
+	cout << var[0] << var[1] << var[2] << var[3] << var[4];
+}
+//pusi no varda 
+int main()
+{
+	//popo();
+	/*mumu();*/
+	/*sisi();*/
+	/*bobo();*/ 
+	/*koko();*/
+	/*lolo();*/
+	/*kargo();*/
+	/*cout << sum() << " " << quadr();
+	avo();*/
+}
